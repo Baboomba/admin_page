@@ -1,0 +1,20 @@
+.index-board {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(247, 245, 245);
+    
+    div {
+        margin: 30px;
+        border-radius: 10px;
+        box-shadow: 1px 1px 10px 1px rgb(179, 178, 178);
+        background-color: white;
+        font-size: 12px;
+
+        .linechart {
+            margin-left: 0;
+            box-shadow: none;
+            font-size: 15px;            
+        }
+    }
+}

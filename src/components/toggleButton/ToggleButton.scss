@@ -1,0 +1,66 @@
+.toggle-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 60px;
+
+    input {
+        position: absolute;
+        z-index: 5;
+        height: 30px;
+        width: 60px;
+        opacity: 0;
+        top: 1px;
+        left: 1px;
+        cursor: pointer;
+        border-radius: 20px;        
+    }
+
+    span {
+        position: absolute;
+        height: 24px;
+        width: 58px;
+        top: 2px;
+        left: 0;
+        border-radius: 20px;
+        background-color: rgb(167, 167, 167);
+        box-shadow: 0px 1px 5px 1px rgb(156, 156, 156);
+
+        &::before {
+            position: absolute;
+            content: '';
+            top: 2px;
+            left: 4px;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background-color: rgb(255, 215, 0);
+            transition: 0.2s;
+        }    
+    }
+
+    input:checked + span::before {
+        transform: translateX(30px);
+        background-color: black;
+    }
+
+    .toggle-sunny-icon {
+        position: absolute;
+        z-index: 4;
+        left: 1.6px;
+        top: 6px;
+        height: 18px;
+        color: black;
+    }
+
+    .toggle-moon-icon {
+        position: absolute;
+        z-index: 3;
+        right: 5px;
+        top: 5px;
+        height: 18px;
+        color: white;
+    }
+}

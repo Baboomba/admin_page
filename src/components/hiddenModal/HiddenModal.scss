@@ -1,0 +1,38 @@
+.hidden-window {
+    display: flex;
+    width: 150px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 7px;
+
+    .hidden-list {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        border-radius: 10px;
+        background-color: white;
+        box-shadow: 1px 1px 10px 1px rgb(167, 165, 165);
+
+
+        .hidden-items {
+            height: 35px;
+            width: 110px;
+            margin: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: rgba(25, 25, 243, 0.2);
+                border-radius: 10px;
+            }
+
+            &:active {
+                background-color: rgba(25, 25, 243, 0.3);
+            }
+        }
+    }
+}

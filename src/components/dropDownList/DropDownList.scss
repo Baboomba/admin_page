@@ -1,0 +1,90 @@
+.drop-down-list {
+    font-family: moon;
+    letter-spacing: 2px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    span {
+        height: 50px;
+        width: 90%;
+        border-radius: 10px;
+        margin-left: 10px;
+        // background-color: rgb(211, 208, 208);
+        background-color: rgb(247, 245, 245);
+        color: rgb(40, 41, 107);
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+
+        label {
+            padding-left: 68px;
+            padding-right: 36px;
+        }
+
+        input {
+            opacity: 0;
+            position: absolute;
+            height: 50px;
+            width: inherit;
+            cursor: pointer;
+        }
+
+        &:hover {
+            color: purple;
+            background-color: rgba(25, 25, 243, 0.288);
+        }
+
+        &:active {
+            background-color: rgba(81, 95, 224, 0.4);
+        }
+    }
+
+    .drop-down {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin: 12px 0px 10px 0px;
+        background-color: rgb(224, 224, 224);
+        color: rgb(40, 41, 107);
+        box-shadow: 0 0 5px 5px rgb(206, 204, 204);
+        height: 200px;
+        overflow: hidden;
+        transition: 0.3s ease;        
+                
+        li {            
+            margin: 5px 0 5px 0;
+            padding-left: 10px;
+            height: 50px;
+            width: 90%;
+            border-radius: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+
+            &:hover {
+                background-color: rgba(25, 25, 243, 0.288);
+                transition: 0.3s;
+                color: white;
+            }
+
+            &:active {
+                background-color: rgba(81, 95, 224, 0.4);
+            }
+
+            .drop-down-subicon {
+                margin-right: 15px;
+            }
+        }
+    }
+
+    .drop-down.open {
+        height: 0;
+        box-shadow: 0 0 0px 0px rgb(206, 204, 204);        
+    }    
+}

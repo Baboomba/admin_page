@@ -1,0 +1,14 @@
+.background {
+    display: flex;
+
+    .container {
+        flex: 1;
+        margin: 0;
+        padding: 0;
+
+        .container-background {
+            height: 92vh;
+            background-color: rgb(247, 245, 245);
+        }
+    }
+}

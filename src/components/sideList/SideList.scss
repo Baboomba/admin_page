@@ -1,0 +1,128 @@
+.sidebar {
+    width: 200px;
+    flex-shrink: 0;
+    min-height: 90vh;
+
+    .logo {
+        background-color: rgba(152, 104, 240, 0.4);
+        height: 55px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        span {
+            display: flex;
+
+            #logo {
+                height: 35px;
+                object-fit: cover;
+            }
+        }        
+    }
+
+    .menu {
+        background-color: rgb(247, 245, 245);
+        height: 92vh;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        color: rgba(247, 245, 245, 0);
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: rgba(152, 104, 240, 0.4);
+        }
+
+        &::-webkit-scrollbar {
+            width: 10px;
+            border-radius: 5px;
+            background-clip: padding-box;
+            border: 5px solid transparent;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            width: 10px;
+            border-radius: 10px;
+            border: 10px solid;
+        }
+
+        .list {
+            padding: 10px;
+            list-style: none;
+
+            .item {
+                margin-top: 10px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: left;
+                padding-left: 10px;
+                border-radius: 10px;
+                color: rgb(40, 41, 107);
+
+                .text {
+                    font-size: 13px;
+                    font-family: moon;
+                    padding-left: 15px;
+                    letter-spacing: 0.12em;
+                }
+
+                #dashboard {
+                    color:blueviolet;
+                }
+
+                #inflation {
+                    color:coral;
+                }
+
+                #rate {
+                    color:gold;
+                }
+
+                #gdp {
+                    color: deepskyblue;
+                }
+
+                #settings {
+                    color:deeppink;
+                }
+
+                #profile {
+                    color: cornflowerblue;
+                }
+
+                &:hover {
+                    transition: background-color 0.3s ease;
+                    border-radius: 10px;
+                    background-color: rgba(187, 191, 223, 0.4);
+                    cursor: pointer;
+                    color: purple;
+                    
+                    .text {
+                        font-size: 14px;
+                    }
+
+                    #dashboard, #inflation, #rate, #gdp, #settings, #profile {
+                        color: rgba(25, 25, 243, 0.288);
+                    }
+                }
+
+                &:active {
+                    background-color: rgba(81, 95, 224, 0.4);
+                }
+            }
+        }
+    }
+
+    hr {
+        border: 1px solid rgb(152, 104, 240);
+        height: 0;
+        margin: 0 0 0px 0;
+        box-shadow: 0px 1px 2px 2px rgb(206, 204, 204);
+    }
+}
+
+
+@font-face {
+    font-family: 'moon';
+    src:url('../../../src/assets/font/Moon2.0-Regular.woff') format('woff');
+}
